@@ -30,7 +30,9 @@ outputs:datos enviados por el puerto usb, pantalla
 proceso: parte del codigo que procesa inputs para enviar outputs
 
 ### Actividad 4
-```
+
+
+```javascript
 function setup() {
   createCanvas(400, 400);
 }
