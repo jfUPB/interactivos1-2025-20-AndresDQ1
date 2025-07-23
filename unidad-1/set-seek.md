@@ -53,3 +53,7 @@ function mouseMoved() {
   ellipse(random(width), mouseY,size,size);
 }
 ```
+
+<img width="390" height="383" alt="image" src="https://github.com/user-attachments/assets/064f5812-be02-4c92-a154-0abdf9462169" />
+
+no se logra apreciar en el pantallazo, pero cada que se mueve el mouse en Y se genera un circulo de color y tamaño aleatorio en X
