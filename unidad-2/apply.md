@@ -17,19 +17,19 @@ STATE_BOOM = 2
 MIN = 1
 MAX = 6
 
-time = 2
-
+time_left = 2
+time=utime.ticks_ms()
 state = STATE_CONFIG
 
     
 while True:
     #estado config
     if state==STATE_CONFIG:
-        display.show(time)
-        if button_a.was_pressed() and time<MAX:
-            time += 1
-        if button_b.was_pressed() and time>MIN:
-            time-= 1
+        display.show(time_left)
+        if button_a.was_pressed() and time_left<MAX:
+            time_left += 1
+        if button_b.was_pressed() and time_left>MIN:
+            time_left -= 1
         if accelerometer.was_gesture('shake'):
             state = STATE_ARMED
             time = utime.ticks_ms()
@@ -37,10 +37,10 @@ while True:
         #estado armed     
     elif state== STATE_ARMED:
         if utime.ticks_diff(utime.ticks_ms(),time)>=1000:
-            time -=1
+            time_left -=1
             time = utime.ticks_ms()
             if time > 0:
-                display.show(time)
+                display.show(time_left)
             else:
                 state= STATE_BOOM
                
@@ -53,3 +53,4 @@ while True:
             time=2
 
 ```
+
