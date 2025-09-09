@@ -1,6 +1,6 @@
 # Unidad 2
 
-## 🔎 Fase: Set + Seek
+## 🔎 Fase: Set + Seek  
 
 ### Actividad 1
 1. el codigo modifica 2 leds del microbit haciendo que se prendan y apaguen a intervalos de tiempos diferentes
